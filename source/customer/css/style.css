@@ -1,0 +1,445 @@
+/* Overall attributes */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-dark-blue: #385a7c;
+    --color-soft-red: #f97171;
+    --color-hard-red: #f94545;
+    --color-coral-pink: #f99192;
+    --color-light-aqua: #8ad6cc;
+    --color-light-aqua-very: #b2eee6;
+    --color-orange-customed: #ff8c42;
+    --color-lighter-blue: #4a7a9d;
+    --container-width-lg: 80%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+    --transition: all 400ms ease;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Hides the scrollbar */
+}
+
+/* ------------------------------------------ */
+/* Fonts */
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lora-font {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: yellow;
+    border-radius: 5px;
+}
+
+/* ------------------------------------------ */
+/* Overall */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------------------ */
+/* Login */
+.login_container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    display: none;
+}
+
+.login {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    width: 80%;
+    height: fit-content;
+    border-radius: 10px;
+    gap: 20px;
+    padding: 25px;
+}
+
+.login img {
+    box-sizing: border-box;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid white;
+}
+
+.login_form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    text-align: center;
+    gap: 15px;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+}
+
+.login_button {
+    grid-column: span 2;
+    width: 100%;
+    height: 100%;
+}
+
+.login_form_label {
+    font-size: large;
+}
+
+.login_input {
+    box-sizing: border-box;
+    width: 100%;
+    color: var(--color-dark-blue);
+    text-align: center;
+    padding: 5px;
+}
+
+.login_forgot {
+    text-decoration: none;
+    color: white;
+}
+
+.loggedIn-box {
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.loggedIn-box:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* ------------------------------------------ */
+/* Home Menu Theme*/
+
+.homeMenuBackground {
+    background-color: white;
+    min-height: 100vh;
+    /* Ensures the background stretches fully */
+    position: relative;
+}
+
+.homeMenuText {
+    color: var(--color-light-aqua-very);
+}
+
+/* ------------------------------------------ */
+
+/* Navigation */
+
+lord-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.home_nav {
+    box-sizing: border-box;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    /* Makes the navbar sticky starting from the top */
+    z-index: 1000;
+    /* Keep it on top of other content */
+}
+
+.home_nav_upper {
+    box-sizing: border-box;
+    padding: 5px;
+    display: grid;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+    border-bottom: 1px solid white;
+    gap: 15px;
+}
+
+.home_nav_upper>* {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.login_logout_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 5px;
+}
+
+lord-icon.nav_item {
+    display: none;
+}
+
+/* Search Section */
+
+.search-box {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+
+.input-search {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 20%;
+    transition: all .5s ease-in-out;
+    background-color: transparent;
+    padding-right: 40px;
+    color: #fff;
+}
+
+.input-search::placeholder {
+    color: rgba(255, 255, 255, .5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+.btn-search {
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    position: absolute;
+    right: 0px;
+    color: #ffffff;
+    background-color: transparent;
+    pointer-events: painted;
+}
+
+.btn-search:focus~.input-search {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.input-search:focus {
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+.search_btn_icon {
+    display: block;
+    width: 80%;
+    height: 80%;
+    color: white;
+}
+
+
+/* ----------------------- */
+/* lower section */
+
+.nav_items {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    gap: 10px;
+}
+
+.nav_items>a {
+    box-sizing: border-box;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    background-color: none;
+    border-radius: 10px;
+}
+
+
+
+.nav_items_describe_div {
+    background-color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+    bottom: -61.5vh;
+    left: 0;
+    right: 10px;
+    margin: 0 auto;
+    height: 60vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: height 5s ease-in-out;
+    padding: 10px;
+}
+
+
+
+.nav_items_active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: yellow;
+}
+
+/* ------------------------------------------ */
+
+/* ------------------------------------------ */
+.parallax {
+    /* The image used */
+    background-image: url("../../../images/paracel.gif");
+    background-position: contain;
+
+    /* Set a specific height */
+    height: 55vh;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ------------------------------------------ */
+/* ChatBot */
+.chatbot {
+    position: fixed;
+    bottom: 80px;
+    right: 5px;
+    z-index: 1000;
+}
+
+
+
+.chatbot-btn {
+    background-color: #385a7c;
+    border: 2px solid white;
+}
+
+.cartbox {
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+    z-index: 100;
+}
+
+.cartExpend {
+    min-width: 60vw;
+    height: 70vh;
+}
+
+/* ------------------------------------------ */
+
+
+
+/* ------------------------------------------ */
+/* Footer Section */
+
+
+/* Media Queries */
+/* For small devices like phones in portrait mode */
+@media only screen and (max-width: 600px) {
+
+    /* Styles for mobile */
+
+    .home_nav_upper {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .home_nav_upper>nav {
+        display: none;
+    }
+
+    #searchingDiv {
+        display: none;
+    }
+}
+
+/* For small devices like phones in landscape mode */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Styles for mobile in landscape */
+}
+
+/* For tablets in portrait or landscape mode */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for tablets */
+}
+
+/* For larger laptops or desktop screens */
+@media only screen and (min-width: 800px) {
+
+    /* Styles for large laptops or desktops */
+    /* Login Section */
+    .login {
+        width: 30%;
+    }
+}
+
+
+/* For medium screens: use auto-fit with minmax() */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* For small screens: single column */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
