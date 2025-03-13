@@ -26,7 +26,8 @@ SneakersWorld is a fully functional eCommerce website built with **PHP, Tailwind
 - **Database:** Apache MySQL
 
 ## 📸 Screenshots
-
+### Landing Page
+https://github.com/Luke-Dev-Tech/SneakerWorld/blob/main/SNW1.gif
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit a pull request or open an issue.
