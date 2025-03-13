@@ -28,7 +28,7 @@ SneakersWorld is a fully functional eCommerce website built with **PHP, Tailwind
 ## 📸 Screenshots
 ### Landing Page
 ![Landing Page of Sneaker World]
-<img src="https://github.com/Luke-Dev-Tech/SneakerWorld/blob/main/SNW1.gif?raw=true" width="500" height="300px">
+<img src="https://github.com/Luke-Dev-Tech/SneakerWorld/blob/main/SNW1.gif?raw=true" width="600px" height="300px">
 
 (https://github.com/Luke-Dev-Tech/SneakerWorld/blob/main/SNW1.gif?raw=true)
 
